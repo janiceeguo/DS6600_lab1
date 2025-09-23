@@ -1,0 +1,13 @@
+services:
+  neo4j:
+    image: neo4j:latest
+    env_file:
+      - .env
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4jdata:/data   
+
+volumes:
+  neo4jdata:
